@@ -6,10 +6,6 @@ const UserController = require('../controller/UserController')
 const path = require('path')
 const { ObjectId } = require('mongodb');
 
-// router.get('^/$|/index(.html)', (req, res) => {
-//     res.sendFile(path.join(__dirname, '..', 'views', 'index.html'))
-// })
-
 router.get('/get', async (req, res) => {
     const data = await User.find().select('-password');
     res.send(data)
