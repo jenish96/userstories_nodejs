@@ -8,7 +8,7 @@ const getUsers = async (req, res) => {
 
 const createUser = async (req, res) => {
     const payload = req.body;
-    // const result = await User.insertMany(payload);
+    const result = await User.insertMany(payload);
     res.send(payload)
 }
 
